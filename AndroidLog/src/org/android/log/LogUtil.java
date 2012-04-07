@@ -157,21 +157,36 @@ public class LogUtil {
 	}
 
 	public static void d(Context context, String msg) {
-		d(context.getClass().getName(), msg);
+		d(context.getClass(), msg);
 	}
 
 	public static void i(Context context, String msg) {
-		i(context.getClass().getName(), msg);
+		i(context.getClass(), msg);
 	}
 
 	public static void e(Context context, String msg) {
-		e(context.getClass().getName(), msg);
+		e(context.getClass(), msg);
 	}
 
 	public static void w(Context context, String msg) {
-		w(context.getClass().getName(), msg);
+		w(context.getClass(), msg);
+	}
+	
+	public static void d(Class<? extends Object> clazz,String msg){
+		d(clazz.getName(), msg);
 	}
 
+	public static void i(Class<? extends Object> clazz,String msg) {
+		i(clazz.getName(), msg);
+	}
+
+	public static void e(Class<? extends Object> clazz,String msg) {
+		e(clazz.getName(), msg);
+	}
+
+	public static void w(Class<? extends Object> clazz,String msg) {
+		w(clazz.getName(), msg);
+	}
 	/**
 	 * store the log to a text file
 	 * 
